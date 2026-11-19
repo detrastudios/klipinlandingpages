@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Klipin: Video Affiliate Faceless dari Satu Link Produk</title>
+<meta name="description" content="Tempel link produk, unggah foto, dapat 8 hook, storyboard 8 detik, prompt gambar & animasi, dan script VO. Rp25.000 sekali beli.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF6D6;--ink:#141414;--card:#fff;--yellow:#FFD93D;--pink:#FF6B9D;--soft:#FFE0EC;--on:#141414;--mut:#4a4a4a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#18141c;--ink:#f7f0e2;--card:#241f2b;--soft:#3a2430;--mut:#c9c1b3}}
+:root[data-theme="dark"]{--bg:#18141c;--ink:#f7f0e2;--card:#241f2b;--soft:#3a2430;--mut:#c9c1b3}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.55;
+background-image:radial-gradient(color-mix(in srgb,var(--ink) 14%,transparent) 1.2px,transparent 1.2px);background-size:22px 22px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.08;margin:0;font-weight:800;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,6.4vw,4.4rem)}
+h2{font-size:clamp(1.7rem,4vw,2.6rem);margin-bottom:14px}
+h3{font-size:1.15rem;letter-spacing:-.01em}
+p{margin:0 0 12px;max-width:62ch}
+section{padding:56px 0}
+.box{background:var(--card);border:3px solid var(--ink);border-radius:14px;box-shadow:6px 6px 0 var(--ink);padding:22px}
+.btn{display:inline-block;font:inherit;font-weight:800;font-size:1.1rem;color:var(--on);background:var(--yellow);border:3px solid var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--ink);padding:14px 26px;text-decoration:none;cursor:pointer;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible{outline:4px solid var(--pink);outline-offset:3px}
+.btn.pink{background:var(--pink)}
+.tag{display:inline-block;background:var(--pink);color:var(--on);font-weight:700;font-size:.9rem;border:2px solid var(--ink);border-radius:99px;padding:4px 14px;margin-bottom:18px}
+.mark{background:var(--yellow);color:var(--on);padding:0 .15em;border-radius:6px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{display:block;color:var(--ink);line-height:0}
+.logo svg{height:44px;width:auto;display:block}
+.credit{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-weight:700;color:var(--ink);text-decoration:none;border:2px solid var(--ink);border-radius:99px;padding:6px 14px;background:var(--card)}
+.credit:hover{background:var(--yellow);color:var(--on)}
+.credit svg{width:20px;height:20px;flex:none}
+.hero{display:grid;gap:36px;grid-template-columns:1.1fr .9fr;align-items:center;padding-top:20px}
+.hero p.lead{font-size:1.2rem;color:var(--mut);margin:18px 0 24px}
+.small{font-size:.92rem;color:var(--mut);margin-top:14px}
+.mock{transform:rotate(1.6deg)}
+.mock .row{display:flex;justify-content:space-between;align-items:center;gap:10px;border:2px solid var(--ink);border-radius:10px;padding:10px 12px;margin-top:10px;background:var(--bg);font-size:.95rem}
+.mock .url{font-size:.85rem;word-break:break-all;color:var(--mut)}
+.score{font-weight:800;background:var(--yellow);color:var(--on);border:2px solid var(--ink);border-radius:8px;padding:2px 10px;white-space:nowrap}
+.mock .cap{font-size:.8rem;color:var(--mut);margin:12px 0 0}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.pain li{margin-bottom:8px}
+ul{padding-left:20px;margin:0}
+.steps{counter-reset:s;display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
+.steps .box{counter-increment:s;position:relative;padding-top:34px}
+.steps .box::before{content:counter(s);position:absolute;top:-18px;left:18px;width:40px;height:40px;display:grid;place-items:center;background:var(--yellow);color:var(--on);border:3px solid var(--ink);border-radius:50%;font-weight:800}
+.alt{background:var(--soft);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.timeline{list-style:none;padding:0;margin:20px 0 0;border-left:4px solid var(--ink)}
+.timeline li{position:relative;padding:0 0 18px 24px}
+.timeline li::before{content:"";position:absolute;left:-12px;top:6px;width:20px;height:20px;background:var(--pink);border:3px solid var(--ink);border-radius:50%}
+.vs{width:100%;border-collapse:collapse;background:var(--card);border:3px solid var(--ink);border-radius:14px;overflow:hidden}
+.vs th,.vs td{padding:12px 14px;text-align:left;border-bottom:2px solid var(--ink);vertical-align:top}
+.vs th{background:var(--yellow);color:var(--on)}
+.vs tr:last-child td{border-bottom:0}
+.scroll{overflow-x:auto}
+.price{text-align:center;background:var(--yellow);color:var(--on)}
+.price .num{font-size:clamp(3rem,10vw,5.2rem);font-weight:800;letter-spacing:-.04em;line-height:1}
+.price p{margin-left:auto;margin-right:auto}
+.price ul{list-style:none;padding:0;margin:18px auto 22px;text-align:left;max-width:380px}
+.price li::before{content:"✓ ";font-weight:800}
+.price .btn{background:var(--ink);color:#fff6d6;box-shadow:5px 5px 0 var(--pink)}
+.price .btn:hover{box-shadow:2px 2px 0 var(--pink)}
+details{background:var(--card);border:3px solid var(--ink);border-radius:12px;margin-bottom:12px;padding:14px 18px}
+summary{font-weight:800;cursor:pointer}
+details p{margin:10px 0 0}
+footer{padding:30px 0 100px;text-align:center;color:var(--mut);font-size:.9rem}
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:3px solid var(--ink)}
+.sticky .btn{display:block;text-align:center;width:100%;padding:12px}
+@media(max-width:800px){.hero,.g3,.g2,.steps{grid-template-columns:1fr}.steps{gap:30px}.mock{transform:none}.sticky{display:block}section{padding:44px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="#" aria-label="Klipin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 64" role="img" aria-label="Klipin"><title>Klipin</title><rect x="10" y="10" width="48" height="48" rx="12" fill="#111111"/><rect x="4" y="4" width="48" height="48" rx="12" fill="#FFD93D" stroke="#111111" stroke-width="4"/><polygon points="22,16 22,40 41,28" fill="#111111" stroke="#111111" stroke-width="4" stroke-linejoin="round"/><circle cx="50" cy="8" r="7" fill="#FF6B9D" stroke="#111111" stroke-width="3"/><text x="76" y="44" font-family="'Space Grotesk','Poppins','Arial Black',Arial,sans-serif" font-size="40" font-weight="700" fill="currentColor" letter-spacing="-1">klip<tspan fill="#FF6B9D">in</tspan></text></svg></a><a class="btn" style="padding:8px 16px;font-size:.95rem;box-shadow:3px 3px 0 var(--ink)" href="https://winme.id/detrastudios1/klipin-ai-video-affiliate-tools">Beli Rp25.000</a></nav>
+
+<header class="hero">
+<div>
+<span class="tag">Edisi launching</span>
+<h1>Tempel link produk. Dapat <span class="mark">paket video affiliate</span> siap produksi.</h1>
+<p class="lead">Klipin menyusun 8 pilihan hook, storyboard per 8 detik, prompt gambar dan animasi, serta script VO dari satu link marketplace dan foto produk. Tanpa tampil wajah.</p>
+<a class="btn" href="https://winme.id/detrastudios1/klipin-ai-video-affiliate-tools">Ambil Klipin, Rp25.000</a>
+<p class="small">Sekali beli. Bukan langganan. Tidak ada tagihan bulanan dari Klipin.</p>
+</div>
+<div class="box mock" aria-label="Contoh tampilan Klipin">
+<strong>Link produk</strong>
+<div class="url">shopee.co.id/produk-kamu…</div>
+<div class="row"><span>Hook A: “Wajib tahu sebelum checkout”</span><span class="score">Skor 86</span></div>
+<div class="row"><span>Hook B: “Capek ya, cari yang awet?”</span><span class="score">Skor 79</span></div>
+<div class="row"><span>Scene 1 · 0–2s / 2–6s / 6–8s</span><span class="score">8 detik</span></div>
+<p class="cap">Ilustrasi tampilan. Hasil nyata menyesuaikan produk dan foto yang kamu unggah.</p>
+</div>
+</header>
+</div>
+
+<section class="alt"><div class="wrap">
+<h2>Bagian paling capek dari affiliate itu mikirnya.</h2>
+<div class="grid g2">
+<ul class="pain box">
+<li>Video di-skip di 2 detik pertama karena opening terasa seperti iklan</li>
+<li>Produk di video AI berubah bentuk dari scene ke scene</li>
+<li>Script VO kepanjangan dan terdengar kaku</li>
+<li>Takut kena banned karena klaim berlebihan</li>
+</ul>
+<div class="box"><h3>Klipin memotong semua itu jadi satu alur.</h3><p style="margin-top:10px">Riset produk, hook, script, prompt Inggris, cek durasi VO, sampai caption ada di satu layar. Kamu tinggal produksi dan posting.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Cara pakai: tiga langkah</h2>
+<div class="steps">
+<div class="box"><h3>Tempel link dan atur konteks</h3><p>Link Shopee, Tokopedia, atau TikTok Shop. Pilih audiens, rasio, dan durasi 16, 24, 32, atau 48 detik.</p></div>
+<div class="box"><h3>Unggah foto, pilih hook</h3><p>Unggah 1 sampai 6 foto, klik Buat Hook, lalu pilih favoritmu berdasarkan skor dan preview layar HP.</p></div>
+<div class="box"><h3>Buat storyboard</h3><p>Image prompt, animation prompt, script VO dengan preview suara, caption, dan hashtag siap disalin atau diekspor.</p></div>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Yang kamu dapat</h2>
+<div class="grid g3">
+<div class="box"><h3>Hook anti-scroll</h3><p>8 variasi dari 16 formula, Stop-Power Score 0 sampai 100, dan mode A/B testing untuk 2 sampai 3 hook.</p></div>
+<div class="box"><h3>Storyboard 8 detik</h3><p>Struktur 0–2s, 2–6s, 6–8s di tiap scene, dengan instruksi tanpa wajah dan tanpa teks acak di video.</p></div>
+<div class="box"><h3>Product Lock dan Hand Lock</h3><p>Bentuk, warna, bahan, dan proporsi produk dikunci supaya konsisten antar scene.</p></div>
+<div class="box"><h3>Script VO natural</h3><p>Gaya Netral, Gaul Santai, atau Gaul Banget. Sebutan Aku-Kamu atau Gw-Lo. Preview suara langsung di aplikasi.</p></div>
+<div class="box"><h3>16 gaya video affiliate</h3><p>POV review, unboxing, masalah ke solusi, before after, ASMR, kurasi pilihan, dan lainnya.</p></div>
+<div class="box"><h3>Safety filter kejujuran</h3><p>Menghindari klaim medis dan angka penjualan fiktif. Ada opsi menyertakan satu kekurangan jujur.</p></div>
+</div>
+<p style="margin-top:18px">Juga ada Bank Hook pribadi, loop line, first comment, caption, hashtag, riwayat proyek, dan ekspor Markdown.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>Dibangun bertahap, dari masalah nyata kreator</h2>
+<p>Klipin tidak jadi dalam sekali duduk. Tiap fitur lahir dari satu hambatan yang terus muncul saat membuat konten affiliate, lalu diuji dan dikerjakan ulang sampai hasilnya bisa dipakai.</p>
+<ul class="timeline">
+<li><strong>Mulai dari generator prompt sederhana.</strong> Pilihan gaya masih sedikit.</li>
+<li><strong>Gaya video diperluas</strong> dan timing distandarkan 1 scene = 8 detik.</li>
+<li><strong>VO dibuat natural</strong>, dengan pilihan suara dan timeline yang sinkron dengan prompt animasi.</li>
+<li><strong>Hook Engine ditambahkan</strong> dengan skor, preview, dan A/B testing.</li>
+<li><strong>Mode konten kurasi</strong> ala akun rekomendasi produk, satu video satu produk.</li>
+<li><strong>Tampilan didesain ulang</strong> dan dilengkapi panduan penggunaan.</li>
+</ul>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Tanpa dan dengan Klipin</h2>
+<div class="scroll"><table class="vs">
+<tr><th></th><th>Manual</th><th>Dengan Klipin</th></tr>
+<tr><td>Hook</td><td>Mikir dari nol tiap video</td><td>8 pilihan dengan skor</td></tr>
+<tr><td>Script VO</td><td>Ditulis dan dihitung kata sendiri</td><td>Batas kata otomatis per scene</td></tr>
+<tr><td>Prompt visual</td><td>Coba-coba, sering berubah bentuk</td><td>Terstruktur dengan Product Lock</td></tr>
+<tr><td>Alat</td><td>4 sampai 5 tools terpisah</td><td>Satu layar</td></tr>
+</table></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="box price">
+<h2>Klipin, edisi launching</h2>
+<div class="num">Rp25.000</div>
+<p style="margin-top:10px"><strong>Sekali beli. Bukan subscribe.</strong></p>
+<ul>
+<li>Akses penuh aplikasi Klipin</li>
+<li>Panduan penggunaan</li>
+<li>Chat admin Telegram dari dalam aplikasi</li>
+</ul>
+<a class="btn" href="https://winme.id/detrastudios1/klipin-ai-video-affiliate-tools">Ambil Klipin Sekarang</a>
+<p class="small" style="color:#4a3b00">Harga ini setara beberapa jam waktu mikir konten yang bisa kamu hemat.</p>
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Sebelum membeli, perlu kamu tahu</h2>
+<div class="grid g3">
+<div class="box"><h3>Pakai API Key sendiri</h3><p>Klipin memakai API Key Gemini pribadimu. Panduan setup ada di dalam aplikasi, dan biaya pemakaian AI mengikuti akunmu.</p></div>
+<div class="box"><h3>Hasilnya paket produksi</h3><p>Klipin menyiapkan hook, storyboard, prompt, VO, dan caption. Video jadi dirender di generator video AI atau editor pilihanmu.</p></div>
+<div class="box"><h3>Data di browser</h3><p>Proyek tersimpan otomatis di browser perangkatmu.</p></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Pertanyaan umum</h2>
+<details><summary>Perlu tampil di kamera?</summary><p>Tidak. Seluruh alurnya dirancang untuk video faceless.</p></details>
+<details><summary>Saya pemula, bisa pakai?</summary><p>Bisa. Alurnya tiga langkah dan ada panduan penggunaan serta tutorial API Key di dalam aplikasi.</p></details>
+<details><summary>Link marketplace apa yang didukung?</summary><p>Shopee, Tokopedia, dan TikTok Shop.</p></details>
+<details><summary>Apakah ini langganan?</summary><p>Bukan. Kamu membayar Rp25.000 sekali.</p></details>
+<details><summary>Kalau bingung atau ada kendala?</summary><p>Hubungi admin lewat tombol chat Telegram di dalam aplikasi.</p></details>
+<div style="text-align:center;margin-top:34px"><a class="btn pink" href="https://winme.id/detrastudios1/klipin-ai-video-affiliate-tools">Mulai Bikin Konten Tanpa Muka</a></div>
+</div></section>
+
+<footer><div class="wrap">Klipin oleh Detra Studios<br><a class="credit" href="https://www.instagram.com/detrastudios/" target="_blank" rel="noopener" aria-label="Instagram @detrastudios"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@detrastudios</a></div></footer>
+<div class="sticky"><a class="btn" href="https://winme.id/detrastudios1/klipin-ai-video-affiliate-tools">Ambil Klipin, Rp25.000</a></div>
+</body>
+</html>
