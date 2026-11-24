@@ -10,3 +10,5 @@ Landing page untuk **Klipin**, studio video affiliate faceless dari Detra Studio
 
 ## Deploy ke GitHub Pages
 Settings > Pages > Deploy from a branch > `main` / `(root)`.
+
+- Galeri contoh video: ganti ID video YouTube Shorts di section `#galeri` (di `href`) dan ganti gambar cuplikan di folder `assets/thumbs/` (`contoh-1.jpg` sampai `contoh-5.jpg`). Kartu membuka video di YouTube.
